@@ -8,6 +8,17 @@ mkdir grading-area
 git clone $1 student-submission
 echo 'Finished cloning'
 
+if [[ -f 'ListExamples.java' ]]
+then 
+    echo 'does exists' 
+    exit 1
+fi 
+    echo 'does not file exists'
+
+cp 'student-submission/ListExamples.java grading-area/' 
+echo 'copied into grading-area' 
+
+
 
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
