@@ -8,18 +8,19 @@ mkdir grading-area
 git clone $1 student-submission
 echo 'Finished cloning'
 
-if [[ -f 'ListExamples.java' ]]
+#determine if the file exists
+if [[ -f 'student-submission/ListExamples.java' ]]
 then 
-    echo 'does exists' 
+    echo 'File exists'
+    cp 'student-submission/ListExamples.java grading-area/'
+    echo 'copied into grading area'
+    #check if it compiles
+
+    #check if it works
     exit 1
-fi 
-    echo 'does not file exists'
 
-cp 'student-submission/ListExamples.java grading-area/' 
-echo 'copied into grading-area' 
-
-
-
+fi
+    echo "File does not exists"
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
 
